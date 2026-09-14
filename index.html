@@ -2,7 +2,20 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Enfermería kawaii con mucho amor: cuidados tiernos, vacunas sin miedo, enfermería a domicilio y sonrisas garantizadas. Te cuidamos con corazoncitos. 🩵">
+<meta name="theme-color" content="#ff8fbf">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Enfermería">
+<meta property="og:title" content="Enfermería 🩵 — Cuidados kawaii con mucho amor">
+<meta property="og:description" content="Cuidamos con amor kawaii: manos suaves, vacunas sin miedo y sonrisas garantizadas.">
+<meta property="og:image" content="assets/icon-512.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🩵%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
 <title>Enfermería 🩵 — Cuidados kawaii con mucho amor 🩷</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -421,6 +434,20 @@
   }
   .logo-nurse svg{width:100%;height:auto}
 
+  /* ============ fluidez android / web ============ */
+  *{-webkit-tap-highlight-color:transparent}
+  a,button,input,textarea{touch-action:manipulation}
+  .nav{top:calc(14px + env(safe-area-inset-top,0px))}
+  .wasap{bottom:calc(26px + env(safe-area-inset-bottom,0px))}
+  #subir{bottom:calc(104px + env(safe-area-inset-bottom,0px))}
+  .foot-in{padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+  .ticker-track{will-change:transform}
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.2s !important}
+    html{scroll-behavior:auto}
+    .sparkle-bg,.cursor-spark{display:none}
+  }
+
   /* ============ responsive ============ */
   @media (max-width:880px){
     .nurse-card{flex-direction:column;text-align:center;padding:30px 24px;gap:18px}
@@ -535,7 +562,10 @@
     <span class="orb-heart h2" style="top:22%;right:4%">✨</span>
     <span class="orb-heart h3" style="bottom:14%;right:16%">🩷</span>
     <div class="sticker">
-      <img src="assets/mascota.png" alt="Luna, enfermera kawaii sonriente con un corazón">
+      <picture>
+        <source type="image/webp" srcset="assets/mascota.webp">
+        <img src="assets/mascota.png" alt="Luna, enfermera kawaii sonriente con un corazón" width="1024" height="1536" fetchpriority="high">
+      </picture>
     </div>
     <div class="chip c1">🩺 24/7 contigo</div>
     <div class="chip c2">💉 sin dolorcito</div>
@@ -662,11 +692,11 @@
     <p>Un pedacito de la ternura que vivimos cada día.</p>
   </div>
   <div class="galeria">
-    <div class="foto reveal"><span class="emoji-flot" style="left:12px">🩷</span><img src="assets/mascota.png" alt="Mascota Luna"><div class="cap">Luna, nuestra estrella</div></div>
-    <div class="foto reveal"><span class="emoji-flot" style="right:12px">💚</span><img src="assets/kit.png" alt="Botiquín kawaii"><div class="cap">Botiquín con carita</div></div>
-    <div class="foto reveal"><span class="emoji-flot" style="left:12px">💜</span><img src="assets/fonendoscopio.png" alt="Fonendoscopio kawaii"><div class="cap">Escuchando corazón</div></div>
-    <div class="foto reveal"><span class="emoji-flot" style="right:12px">✨</span><img src="assets/utensilios.png" alt="Utensilios médicos kawaii"><div class="cap">Herramientas tiernas</div></div>
-    <div class="foto reveal"><span class="emoji-flot" style="left:12px">🐶</span><img src="assets/pacientes.png" alt="Pacientes kawaii"><div class="cap">Nuestros pacientes</div></div>
+    <div class="foto reveal"><span class="emoji-flot" style="left:12px">🩷</span><picture><source type="image/webp" srcset="assets/mascota.webp"><img src="assets/mascota.png" alt="Mascota Luna" loading="lazy" decoding="async"></picture><div class="cap">Luna, nuestra estrella</div></div>
+    <div class="foto reveal"><span class="emoji-flot" style="right:12px">💚</span><picture><source type="image/webp" srcset="assets/kit.webp"><img src="assets/kit.png" alt="Botiquín kawaii" loading="lazy" decoding="async"></picture><div class="cap">Botiquín con carita</div></div>
+    <div class="foto reveal"><span class="emoji-flot" style="left:12px">💜</span><picture><source type="image/webp" srcset="assets/fonendoscopio.webp"><img src="assets/fonendoscopio.png" alt="Fonendoscopio kawaii" loading="lazy" decoding="async"></picture><div class="cap">Escuchando corazón</div></div>
+    <div class="foto reveal"><span class="emoji-flot" style="right:12px">✨</span><picture><source type="image/webp" srcset="assets/utensilios.webp"><img src="assets/utensilios.png" alt="Utensilios médicos kawaii" loading="lazy" decoding="async"></picture><div class="cap">Herramientas tiernas</div></div>
+    <div class="foto reveal"><span class="emoji-flot" style="left:12px">🐶</span><picture><source type="image/webp" srcset="assets/pacientes.webp"><img src="assets/pacientes.png" alt="Pacientes kawaii" loading="lazy" decoding="async"></picture><div class="cap">Nuestros pacientes</div></div>
   </div>
 </section>
 
@@ -913,6 +943,13 @@ document.querySelector('.logo').addEventListener('click',e=>{
   const r=e.currentTarget.getBoundingClientRect();
   explotarCorazones(r.left+r.width/2,r.top+r.height/2,26);
 });
+
+/* ---------- PWA: service worker (funciona offline en Android y web) ---------- */
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
+}
 </script>
 </body>
 </html>
