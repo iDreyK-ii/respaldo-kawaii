@@ -1,5 +1,5 @@
 /* Service worker kawaii 🩵 — caché con estrategia stale-while-revalidate */
-const CACHE = 'enfermeria-kawaii-v1';
+const CACHE = 'enfermeria-kawaii-v2';
 const CORE = [
   './',
   './index.html',
@@ -15,7 +15,11 @@ const CORE = [
   './assets/kit.png',
   './assets/fonendoscopio.png',
   './assets/utensilios.png',
-  './assets/pacientes.png'
+  './assets/pacientes.png',
+  './assets/favicon-32.png',
+  './assets/favicon-64.png',
+  './assets/apple-icon.png',
+  './assets/og-image.png'
 ];
 
 self.addEventListener('install', e => {
