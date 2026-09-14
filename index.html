@@ -169,6 +169,7 @@
     animation:flotarSticker 4.5s ease-in-out infinite;
     transition:transform .5s cubic-bezier(.34,1.56,.64,1);
   }
+  .sticker img{width:100%;height:auto;display:block}
   .sticker:hover{transform:rotate(0deg) scale(1.04)}
   .sticker::before{
     content:"";position:absolute;top:-16px;left:50%;transform:translateX(-50%) rotate(-3deg);
@@ -319,7 +320,8 @@
 
   /* toast */
   .toast{
-    position:fixed;bottom:28px;left:50%;transform:translate(-50%,140px);z-index:200;
+    position:fixed;bottom:28px;left:50%;transform:translate(-50%,180%);z-index:200;
+    max-width:min(92vw,560px);width:max-content;
     background:#fff;border:3px solid var(--rosa);color:var(--texto);font-weight:700;font-family:'Baloo 2';
     padding:16px 30px;border-radius:100px;box-shadow:0 14px 34px rgba(255,143,191,.4);
     transition:transform .6s cubic-bezier(.34,1.56,.64,1);
