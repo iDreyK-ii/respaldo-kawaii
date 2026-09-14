@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<script>(function(){try{var t=null;try{t=localStorage.getItem('kawaii-theme')}catch(e){}if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="Enfermería kawaii con mucho amor: cuidados tiernos, vacunas sin miedo, enfermería a domicilio y sonrisas garantizadas. Te cuidamos con corazoncitos. 🩵">
@@ -11,15 +10,12 @@
 <meta name="apple-mobile-web-app-title" content="Enfermería">
 <meta property="og:title" content="Enfermería 🩵 — Cuidados kawaii con mucho amor">
 <meta property="og:description" content="Cuidamos con amor kawaii: manos suaves, vacunas sin miedo y sonrisas garantizadas.">
-<meta property="og:image" content="assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="assets/icon-512.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_PE">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
-<link rel="apple-touch-icon" href="assets/apple-icon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🩵%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
 <title>Enfermería 🩵 — Cuidados kawaii con mucho amor 🩷</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -438,70 +434,6 @@
   }
   .logo-nurse svg{width:100%;height:auto}
 
-  /* ============ boton de tema ============ */
-  .theme-btn{
-    border:none;background:var(--rosa-claro);width:42px;height:42px;border-radius:50%;
-    font-size:19px;cursor:pointer;display:grid;place-items:center;
-    transition:transform .5s cubic-bezier(.34,1.56,.64,1),background .4s;
-    box-shadow:0 4px 12px rgba(91,74,104,.12);
-  }
-  .theme-btn:hover{transform:scale(1.15) rotate(20deg)}
-  .theme-btn:active{transform:scale(.88)}
-
-  /* ============ modo oscuro turquesa ============ */
-  [data-theme="dark"]{
-    --rosa:#2ec4b6;
-    --rosa-claro:#2a6a60;
-    --rosa-suave:#12302c;
-    --lila:#9d8bf0;
-    --lila-claro:#332b52;
-    --menta:#3ddbb0;
-    --menta-claro:#12433c;
-    --crema:#10222e;
-    --naranja:#e0a074;
-    --texto:#eaf6f3;
-    --texto-suave:#9fb8b4;
-    --blanco:#16242f;
-    --sombra:0 10px 30px rgba(46,196,182,.18);
-  }
-  [data-theme="dark"] body{
-    background:
-      radial-gradient(circle at 15% 20%, rgba(46,196,182,.12) 0, transparent 40%),
-      radial-gradient(circle at 85% 15%, rgba(157,139,240,.12) 0, transparent 42%),
-      radial-gradient(circle at 70% 90%, rgba(61,219,176,.08) 0, transparent 40%),
-      linear-gradient(160deg,#0d1a26 0%,#101c30 55%,#0d2126 100%);
-  }
-  [data-theme="dark"] .nav{background:rgba(13,26,38,.85);border-color:rgba(46,196,182,.35)}
-  [data-theme="dark"] .nav-links{background:rgba(13,26,38,.96)}
-  [data-theme="dark"] .badge,[data-theme="dark"] .stat,[data-theme="dark"] .chip{background:rgba(22,36,47,.85)}
-  [data-theme="dark"] .badge{border-color:#2a6a60}
-  [data-theme="dark"] .hero h1 .dest svg path{stroke:#2ec4b6}
-  [data-theme="dark"] .btn-rosa{background:linear-gradient(135deg,#2ec4b6,#1f9e92);box-shadow:0 8px 22px rgba(46,196,182,.35)}
-  [data-theme="dark"] .btn-blanco{background:#16242f;color:#7fe3d3;border-color:#2a5a52}
-  [data-theme="dark"] .blob{background:linear-gradient(140deg,#123f3a,#332b52 55%,#12433c)}
-  [data-theme="dark"] .sticker{background:#16242f}
-  [data-theme="dark"] .sticker::before{background:rgba(46,196,182,.28)}
-  [data-theme="dark"] .nurse-card,[data-theme="dark"] .card,[data-theme="dark"] .paso .num,
-  [data-theme="dark"] .paso .bubble,[data-theme="dark"] .foto,[data-theme="dark"] .testi,
-  [data-theme="dark"] .form,[data-theme="dark"] .toast,[data-theme="dark"] .wasap .tip{background:#16242f}
-  [data-theme="dark"] .card::after{background:radial-gradient(ellipse,rgba(46,196,182,.16),transparent 70%)}
-  [data-theme="dark"] .sec-head .tag{background:#16242f}
-  [data-theme="dark"] .nurse-chips span{background:#16242f}
-  [data-theme="dark"] .paso .bubble::before,[data-theme="dark"] .testi::after{background:#16242f}
-  [data-theme="dark"] .testi .avatar{background:#1e3240}
-  [data-theme="dark"] .contacto-info{background:linear-gradient(150deg,#123f3a,#332b52)}
-  [data-theme="dark"] .contacto-info .dato .ico{background:#1e3240}
-  [data-theme="dark"] .preloader{background:linear-gradient(160deg,#0d1a26,#101c30 55%,#0d2126)}
-  [data-theme="dark"] .foot-in{background:linear-gradient(135deg,#0f2a2e,#241f3a)}
-  [data-theme="dark"] .wave-top path{fill:#0d1a26}
-  [data-theme="dark"] .toast{border-color:#2ec4b6}
-  [data-theme="dark"] #subir{background:#16242f;border-color:#2a5a52}
-  [data-theme="dark"] .logo-nurse{filter:drop-shadow(0 4px 10px rgba(46,196,182,.5))}
-  [data-theme="dark"] .campo input,[data-theme="dark"] .campo textarea{color:#eaf6f3}
-  [data-theme="dark"] .campo input:focus,[data-theme="dark"] .campo textarea:focus{
-    border-color:#2ec4b6;background:#102622;box-shadow:0 0 0 5px rgba(46,196,182,.25);
-  }
-
   /* ============ fluidez android / web ============ */
   *{-webkit-tap-highlight-color:transparent}
   a,button,input,textarea{touch-action:manipulation}
@@ -595,7 +527,6 @@
     <path d="M174 114 q 6 -5 9 -11" stroke="#ffd166" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9"/>
   </g>
 </svg></span> Enfermería</a>
-  <button class="theme-btn" id="themeBtn" aria-label="Cambiar a modo oscuro">🌙</button>
   <button class="menu-btn" id="menuBtn" aria-label="menú">☰</button>
   <div class="nav-links" id="navLinks">
     <a href="#inicio" class="activa">Inicio</a>
@@ -1012,25 +943,6 @@ document.querySelector('.logo').addEventListener('click',e=>{
   const r=e.currentTarget.getBoundingClientRect();
   explotarCorazones(r.left+r.width/2,r.top+r.height/2,26);
 });
-
-/* ---------- tema claro/oscuro (oscuro = turquesa) ---------- */
-(function(){
-  const btn=document.getElementById('themeBtn');
-  const root=document.documentElement;
-  function pinta(t){
-    root.setAttribute('data-theme',t);
-    try{localStorage.setItem('kawaii-theme',t)}catch(e){}
-    btn.textContent=(t==='dark')?'🌞':'🌙';
-    btn.setAttribute('aria-label', t==='dark'?'Cambiar a modo claro':'Cambiar a modo oscuro');
-  }
-  pinta(root.getAttribute('data-theme')||'light');
-  btn.addEventListener('click',()=>{
-    const nuevo=root.getAttribute('data-theme')==='dark'?'light':'dark';
-    pinta(nuevo);
-    const r=btn.getBoundingClientRect();
-    explotarCorazones(r.left+r.width/2, r.top+r.height/2, 10);
-  });
-})();
 
 /* ---------- PWA: service worker (funciona offline en Android y web) ---------- */
 if('serviceWorker' in navigator){
