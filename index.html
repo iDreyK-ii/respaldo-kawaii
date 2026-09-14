@@ -391,18 +391,30 @@
   .nurse .twinkle{transform-box:fill-box;transform-origin:center;animation:nTwinkle 2.6s ease-in-out infinite}
   .nurse .twinkle.t2{animation-delay:1.3s}
   .nurse-hero{
-    position:absolute;top:22%;left:-7%;width:175px;z-index:3;
+    width:190px;flex:0 0 auto;position:relative;
     animation:nBob 3.6s ease-in-out infinite;filter:drop-shadow(0 14px 20px rgba(255,143,191,.3));
   }
   .nurse-hero svg{width:100%;height:auto;display:block}
-  .nurse-hero .hola{
-    position:absolute;top:-38px;left:-18px;background:#fff;border-radius:16px;padding:8px 14px;
-    font-size:.8rem;font-weight:700;white-space:nowrap;box-shadow:0 8px 18px rgba(91,74,104,.15);
-    animation:flotar 3.8s ease-in-out infinite;z-index:2;
+  .nurse-intro{padding:56px 6vw 24px}
+  .nurse-card{
+    max-width:880px;margin:0 auto;background:#fff;border-radius:38px;
+    box-shadow:0 16px 40px rgba(255,143,191,.2);
+    display:flex;align-items:center;gap:40px;padding:36px 46px;flex-wrap:wrap;
   }
-  .nurse-hero .hola::after{
-    content:"";position:absolute;bottom:-7px;left:20px;width:14px;height:14px;background:#fff;transform:rotate(45deg);border-radius:3px;
+  .nurse-card .txt{flex:1 1 320px}
+  .nurse-card h2{font-size:1.8rem;margin-bottom:10px}
+  .nurse-card p{color:var(--texto-suave);font-weight:600;margin-bottom:18px}
+  .nurse-card .tag{
+    display:inline-block;background:var(--rosa-suave);border:2px solid var(--rosa-claro);color:var(--rosa);
+    font-weight:700;font-size:.8rem;padding:6px 16px;border-radius:100px;margin-bottom:14px;
   }
+  .nurse-chips{display:flex;gap:10px;flex-wrap:wrap}
+  .nurse-chips span{
+    background:#fff;border:2px solid var(--rosa-claro);border-radius:100px;padding:7px 15px;
+    font-size:.85rem;font-weight:700;box-shadow:0 4px 10px rgba(91,74,104,.08);
+    transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .35s;
+  }
+  .nurse-chips span:hover{transform:translateY(-4px) rotate(-2deg);background:var(--rosa-claro)}
   .logo-nurse{
     width:46px;height:46px;display:block;flex:0 0 46px;
     animation:nBob 3s ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(255,143,191,.35));
@@ -411,8 +423,9 @@
 
   /* ============ responsive ============ */
   @media (max-width:880px){
-    .nurse-hero{width:140px;left:-2%;top:2%}
-    .nurse-hero .hola{font-size:.72rem;top:-34px;left:-6px}
+    .nurse-card{flex-direction:column;text-align:center;padding:30px 24px;gap:18px}
+    .nurse-card .nurse-hero{width:150px}
+    .nurse-chips{justify-content:center}
     .hero{grid-template-columns:1fr;text-align:center;padding-top:120px}
     .hero-txt .badge,.cta-row,.stats{justify-content:center}
     .hero-art{order:-1;margin-bottom:10px}
@@ -521,9 +534,26 @@
     <span class="orb-heart" style="top:6%;left:10%">💗</span>
     <span class="orb-heart h2" style="top:22%;right:4%">✨</span>
     <span class="orb-heart h3" style="bottom:14%;right:16%">🩷</span>
-    <!-- enfermera animada que saluda -->
+    <div class="sticker">
+      <img src="assets/mascota.png" alt="Luna, enfermera kawaii sonriente con un corazón">
+    </div>
+    <div class="chip c1">🩺 24/7 contigo</div>
+    <div class="chip c2">💉 sin dolorcito</div>
+  </div>
+</header>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>cuidado con amor</span><span>manos suaves</span><span>sonrisas garantizadas</span>
+    <span>vacunas sin miedo</span><span>abrazitos incluidos</span><span>siempre a tu lado</span>
+  </div>
+</div>
+
+<!-- ============ LUNITA, LA ENFERMERA ANIMADA ============ -->
+<section class="nurse-intro">
+  <div class="nurse-card reveal">
     <div class="nurse-hero">
-      <span class="hola">¡Hola! Te cuido con amor 💗</span>
       <svg class="nurse" viewBox="0 0 200 234" aria-hidden="true">
         <path class="twinkle" d="M30 52 l4.5 11 11 4.5 -11 4.5 -4.5 11 -4.5 -11 -11 -4.5 11 -4.5 z" fill="#ffd166"/>
         <path class="twinkle t2" d="M174 92 l3.5 8.8 8.8 3.5 -8.8 3.5 -3.5 8.8 -3.5 -8.8 -8.8 -3.5 8.8 -3.5 z" fill="#8fe3c0"/>
@@ -564,21 +594,18 @@
         </g>
       </svg>
     </div>
-    <div class="sticker">
-      <img src="assets/mascota.png" alt="Luna, enfermera kawaii sonriente con un corazón">
+    <div class="txt">
+      <span class="tag">👩‍⚕️ Conoce a la más mona</span>
+      <h2>Esta es Lunita, la enfermera kawaii</h2>
+      <p>¡La asistentita de Luna! Te recibe en la puerta con una sonrisita, te da el termómetro bien calentito y siempre tiene una pegatina de corazoncito lista para los valientes. 💗</p>
+      <div class="nurse-chips">
+        <span>👋 Te saluda al llegar</span>
+        <span>💊 Medicinas con juguito</span>
+        <span>🩵 Mucho amor incluido</span>
+      </div>
     </div>
-    <div class="chip c1">🩺 24/7 contigo</div>
-    <div class="chip c2">💉 sin dolorcito</div>
   </div>
-</header>
-
-<!-- ============ TICKER ============ -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack">
-    <span>cuidado con amor</span><span>manos suaves</span><span>sonrisas garantizadas</span>
-    <span>vacunas sin miedo</span><span>abrazitos incluidos</span><span>siempre a tu lado</span>
-  </div>
-</div>
+</section>
 
 <!-- ============ SERVICIOS ============ -->
 <section id="servicios">
